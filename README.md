@@ -20,6 +20,34 @@ c) Explicación sobre la conversión del diagrama UML al código, explicando las
 
 -Uso de enum class para valores predefinidos.
 
+# Explicación sobre la conversión del diagrama UML al código
+
+La conversión de un diagrama UML a código implica seguir los principios del diseño orientado a objetos y reflejar las clases, relaciones y comportamientos especificados en el diagrama dentro del código.
+
+## 1. Clientes y Productos como Clases
+
+- **Cliente** y **Producto** son representados como clases que contienen atributos relevantes como `id`, `nombre`, `email`, etc., para Cliente y `id`, `nombre`, `descripcion`, `precio`, `impuesto` y `stock` para Producto. Este mapeo es directo desde el diagrama UML.
+- Estas clases son modeladas como `data class` en Kotlin, lo que facilita la creación de objetos inmutables con funciones estándar como `toString()`, `equals()`, etc.
+
+## 2. Relación entre Pedido y DetallePedido
+
+- El diagrama muestra una relación uno-a-muchos entre `Pedido` y `DetallePedido`. Esto se refleja con la clase `Pedido` teniendo una lista mutable de objetos `DetallePedido`, que se agregan usando el método `agregarDetalle`.
+- El cálculo del total del pedido es una función (`calcularTotal()`) en la clase `Pedido`, que suma los subtotales de todos los `DetallePedido`.
+
+## 3. Estado del Pedido
+
+- Se utiliza un **enum** (`EstadoPedido`) para representar los diferentes estados de un pedido, como pendiente (`Pdte`), pagado (`Pgdo`), completado (`Pcdo`), enviado (`Envdo`) y entregado (`Entgdo`).
+- El estado se mantiene en la clase `Pedido` como una propiedad mutable.
+
+## 4. Tipos de Pago
+
+- La clase base `Pago` tiene atributos comunes como `id`, `monto`, `fecha` y `tipo`. Las clases derivadas (`Tarjeta`, `Efectivo`, `Cheque`) heredan de `Pago` y añaden atributos específicos de cada tipo de pago, como `numero` y `fechaCaducidad` para `Tarjeta` o `banco` y `nombre` para `Cheque`.
+- Esta jerarquía refleja la necesidad de diferentes tipos de pago, pero compartiendo comportamientos comunes definidos en la clase base `Pago`.
+
+## 5. Uso de funciones de soporte
+
+- En el código se utiliza `sumOf` para calcular el total del pedido de manera eficiente, lo que muestra cómo un comportamiento agregado se implementa en las clases. Esta función recorre los detalles del pedido, sumando los subtotales de cada `DetallePedido`.
+
 
 
 
