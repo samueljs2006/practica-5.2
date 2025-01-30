@@ -1,11 +1,11 @@
-#Practica 5.2
+# Practica 5.2
 
-#a) Los elementos que te has encontrado en UML y que tienen mapeo sobre conceptos orientados a objetos.
+# a) Los elementos que te has encontrado en UML y que tienen mapeo sobre conceptos orientados a objetos.
 
 Los elemento que he encontrado son las class : clientes , pedido, pago , estadoPedido , detallePedido , producto , heredan de pago(Efectivo, Cheque , Tarjeta) con sus atributos y sus metodos 
 que lo puedes ver en el archivo pdf que esta en el repositorio y tambien la relaciones que hay entre clases
 
-#b) Explicación de la herramienta que has utilizado parra generar el diagrama UML, y si la has contrastado con otra y conclusiones de porque has elegido esa.
+# b) Explicación de la herramienta que has utilizado parra generar el diagrama UML, y si la has contrastado con otra y conclusiones de porque has elegido esa.
 
 He ultilizado lucidchart  para crear el diagrama de UML , la elegido porque es muy comodo y se guarda todo ne la nube , se puede trabajar en equipo compartiendo el enlace , lo puedes exportar 
 y importar en diferentes formatos y es gratis.
