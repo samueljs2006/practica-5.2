@@ -13,8 +13,11 @@ y importar en diferentes formatos y es gratis.
 c) Explicación sobre la conversión del diagrama UML al código, explicando las decisiones que has tomado. No tiene porque ser el codigo completo, pero si un esquema de lo que podría llegar a ser. 
 
 -Uso de data class para clases de solo datos.
+
 -Implementación de relaciones mediante listas (MutableList) y herencia (open class).
+
 -Métodos específicos (calcularTotal(), agregarDetalle()) para cumplir con la funcionalidad esperada.
+
 -Uso de enum class para valores predefinidos.
 
 
